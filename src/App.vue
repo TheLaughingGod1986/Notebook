@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <Notebook @change-page="changePage" @new-page="newPage" :pages="pages" :activePage="index" />
+    <Page @save-page="savePage" @delete-page="deletePage" :page="pages[index]" />
   </div>
+
 </template>
 
 <script>
